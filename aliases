@@ -1,2 +1,3 @@
 # Configs
 alias vimconfig='vim ~/.vimrc'
+alias zshconfig='vim ~/.zshrc'
