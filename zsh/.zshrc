@@ -100,6 +100,11 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 source ~/.dotfiles/aliases
 
+# Source system specific aliases by creating .system_aliases file on home dir
+if [ -f ~/.system_aliases ]; then
+    source ~/.system_aliases    
+fi
+
 # Completion
 fpath=(~/.zsh/completion $fpath)
 
