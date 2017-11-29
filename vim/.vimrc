@@ -9,3 +9,7 @@ set expandtab
 
 "Enable lines numbering
 set number
+
+"Add /bin/bash shebang to *.sh files
+autocmd BufNewFile *.sh 0put = '#!/bin/bash'
+
