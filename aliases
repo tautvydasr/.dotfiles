@@ -8,6 +8,7 @@ alias cls='clear'
 alias open='xdg-open'
 alias trashbin='cd ~/.local/share/Trash'
 alias cleantrashbin='/bin/rm -rf ~/.local/share/Trash/files/* & /bin/rm -rf ~/.local/share/Trash/info/*' 
+alias cleancrashes='sudo /bin/rm /var/crash/*'
 
 # Git
 alias glr='git pull --rebase'
