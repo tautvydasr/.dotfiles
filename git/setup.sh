@@ -12,3 +12,5 @@ git config --global core.excludesfile ~/.dotfiles/git/.gitignore
 git config --global push.default tracking
 git config --global pull.rebase true
 git config --global color.ui true
+git config --global commit.gpgsign true
+
