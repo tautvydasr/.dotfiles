@@ -8,7 +8,7 @@ sudo groupadd docker
 sudo usermod -aG docker $USER
 
 # Setup docker-compose
-sudo apt-get install -y docker-compose
+sudo curl -L https://github.com/docker/compose/releases/download/1.19.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
 
 echo "Logout and run verify.sh script to test out docker and docker-compose installations"
 
