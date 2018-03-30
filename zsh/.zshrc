@@ -4,6 +4,8 @@
 # Path to your oh-my-zsh installation.
   export ZSH=/home/tautvydas/.oh-my-zsh
   export PATH=$PATH:~/.datadog-dockerfiles/bin
+  export NODEJS_HOME=/usr/lib/nodejs/node-v9.6.1
+  export PATH=$NODEJS_HOME/bin:$PATH
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
