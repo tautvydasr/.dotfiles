@@ -13,4 +13,5 @@ git config --global push.default tracking
 git config --global pull.rebase true
 git config --global color.ui true
 git config --global commit.gpgsign true
+git config --global pager.branch false
 
