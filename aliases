@@ -17,4 +17,5 @@ alias gpf='git push -f origin $(git_current_branch)'
 # Docker (Docker-compose)
 alias run-behat="docker-compose exec --user www php /var/www/vendor/bin/behat"
 alias run-unit="docker-compose exec --user www php /var/www/vendor/bin/phpunit"
+alias dcproxy="cd ~/.datadog-dockerfiles/proxy && docker-compose up -d && cd -"
 
