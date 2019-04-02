@@ -1,6 +1,6 @@
 # Configs
-alias vimconfig='vim ~/.vimrc'
-alias zshconfig='vim ~/.zshrc'
+alias vimconfig='$EDITOR ~/.vimrc'
+alias zshconfig='$EDITOR ~/.zshrc'
 alias dotfiles='cd ~/.dotfiles'
 
 # System
