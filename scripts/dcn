@@ -1,0 +1,10 @@
+#!/bin/bash
+
+COMMAND="bash"
+
+if [ ! -z "$2" ]; then
+    COMMAND="$2"
+fi
+
+docker exec -ti $1 sh -c "TERM=xterm $COMMAND"
+

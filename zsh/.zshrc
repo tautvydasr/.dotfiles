@@ -7,6 +7,8 @@
   export NODEJS_HOME=/usr/lib/nodejs/node-v9.6.1
   export PATH=$NODEJS_HOME/bin:$PATH
   export PATH=$PATH:~/.local/bin
+  export PATH=$PATH:~/.dotfiles/scripts
+  export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
