@@ -25,3 +25,7 @@ alias dcproxy="cd ~/.datadog-dockerfiles/proxy && docker-compose up -d && cd -"
 alias pa='php artisan'
 alias he='heroku'
 
+# Kubernetes
+alias kb='kubectl'
+alias kbo='kubectl options'
+
