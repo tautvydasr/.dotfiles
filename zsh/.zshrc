@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/tautvydas/.oh-my-zsh
+  export ZSH=~/.oh-my-zsh
   export PATH=$PATH:~/.datadog-dockerfiles/bin
   export PATH=$NODEJS_HOME/bin:$PATH
   export PATH=$PATH:~/.local/bin

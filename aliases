@@ -1,3 +1,5 @@
+source ~/.dotfiles/scripts/os.sh
+
 # Configs
 alias vimconfig='$EDITOR ~/.vimrc'
 alias zshconfig='$EDITOR ~/.zshrc'
@@ -5,12 +7,19 @@ alias dotfiles='cd ~/.dotfiles'
 
 # System
 alias cls='clear'
-alias open='xdg-open'
-alias o='xdg-open'
-alias trashbin='cd ~/.local/share/Trash'
-alias cleantrashbin='/bin/rm -rf ~/.local/share/Trash/files/* & /bin/rm -rf ~/.local/share/Trash/info/*' 
-alias cleancrashes='sudo /bin/rm /var/crash/*'
 alias rmf='/bin/rm -rf'
+
+if is_linux; then
+    alias open='xdg-open'
+    alias o='xdg-open'
+    alias trashbin='cd ~/.local/share/Trash'
+    alias cleantrashbin='/bin/rm -rf ~/.local/share/Trash/files/* & /bin/rm -rf ~/.local/share/Trash/info/*' 
+    alias cleancrashes='sudo /bin/rm /var/crash/*'
+fi
+
+if is_mac; then
+    alias o='open'
+fi
 
 # Git
 alias glr='git pull --rebase'
