@@ -24,6 +24,7 @@ fi
 # Git
 alias glr='git pull --rebase'
 alias gpf='git push -f origin $(git_current_branch)'
+alias gbdd='git branch -D'
 
 # Docker (Docker-compose)
 alias run-behat="docker-compose exec --user www php /var/www/vendor/bin/behat"
