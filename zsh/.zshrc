@@ -1,18 +1,13 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
+source ~/.dotfiles/scripts/path.sh
 
 # Export paths
 export ZSH=~/.oh-my-zsh
-export PATH=$PATH:~/.local/bin
-export PATH=$PATH:~/.dotfiles/scripts
-
-if [ -d ~/.datadog-dockerfiles/bin ]; then
-    export PATH=$PATH:~/.datadog-dockerfiles/bin
-fi
-
-if [ -d "$HOME/Applications/Visual Studio Code.app/Contents/Resources/app/bin" ]; then
-    export PATH="$PATH:$HOME/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
-fi
+export_to_path ~/.local/bin
+export_to_path ~/.dotfiles/scripts
+export_to_path ~/.datadog-dockerfiles/bin 
+export_to_path "$HOME/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
