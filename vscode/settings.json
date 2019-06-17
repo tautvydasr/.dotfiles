@@ -13,5 +13,11 @@
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
 
-  "breadcrumbs.enabled": true  
+  "breadcrumbs.enabled": true,
+  "editor.minimap.enabled": true,
+  "gitlens.settings.mode": "advanced",
+  "gitlens.currentLine.enabled": false,
+  "gitlens.hovers.currentLine.over": "line",
+  "gitlens.blame.compact": false,
+  "gitlens.hovers.enabled": false
 }
