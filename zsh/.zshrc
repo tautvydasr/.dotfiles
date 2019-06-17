@@ -6,8 +6,12 @@ export ZSH=~/.oh-my-zsh
 export PATH=$PATH:~/.local/bin
 export PATH=$PATH:~/.dotfiles/scripts
 
-if [ -f ~/.datadog-dockerfiles/bin ]; then
+if [ -d ~/.datadog-dockerfiles/bin ]; then
     export PATH=$PATH:~/.datadog-dockerfiles/bin
+fi
+
+if [ -d "$HOME/Applications/Visual Studio Code.app/Contents/Resources/app/bin" ]; then
+    export PATH="$PATH:$HOME/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 fi
 
 # Set name of the theme to load. Optionally, if you set this to "random"
