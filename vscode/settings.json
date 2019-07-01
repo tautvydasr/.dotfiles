@@ -16,11 +16,15 @@
   "breadcrumbs.enabled": true,
   "editor.minimap.enabled": true,
   "gitlens.settings.mode": "advanced",
-  "gitlens.currentLine.enabled": false,
   "gitlens.hovers.currentLine.over": "line",
   "gitlens.blame.compact": false,
   "gitlens.hovers.enabled": false,
   "window.zoomLevel": 0,
-  "gitlens.blame.format": "${author}, ${message|40?} ${agoOrDate|14-}",
-  "gitlens.blame.avatars": false
+  "gitlens.blame.format": "[${id}] ${author}, ${message|40?} ${agoOrDate|14-}",
+  "gitlens.blame.avatars": false,
+  "gitlens.currentLine.format": "[${id}] ${author}, ${agoOrDate} • ${message}${id}${id}${id}",
+  "gitlens.currentLine.enabled": false,
+  "gitlens.statusBar.format": "[${id}] ${author}, ${agoOrDate}",
+  "gitlens.statusBar.alignment": "left",
+  "gitlens.statusBar.reduceFlicker": true
 }
