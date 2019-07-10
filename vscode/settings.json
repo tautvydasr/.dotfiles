@@ -26,5 +26,6 @@
   "gitlens.currentLine.enabled": false,
   "gitlens.statusBar.format": "[${id}] ${author}, ${agoOrDate}",
   "gitlens.statusBar.alignment": "left",
-  "gitlens.statusBar.reduceFlicker": true
+  "gitlens.statusBar.reduceFlicker": true,
+  "javascript.updateImportsOnFileMove.enabled": "always"
 }
