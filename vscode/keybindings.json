@@ -3,5 +3,17 @@
   {
     "key": "ctrl+n",
     "command": "explorer.newFile"
-  }
+  },
+  {
+    "key": "ctrl+d",
+    "command": "explorer.newFolder",
+  },
+  {
+    "key": "cmd+e",
+    "command": "workbench.files.action.showActiveFileInExplorer"
+  },
+  {
+    "key": "cmd+f",
+    "command": "actions.findWithSelection"
+  },
 ]

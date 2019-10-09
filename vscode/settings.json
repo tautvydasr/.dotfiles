@@ -2,17 +2,13 @@
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
   "files.autoSave": "afterDelay",
-
   "workbench.editor.enablePreview": false,
   "workbench.editor.highlightModifiedTabs": true,
-
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
-
   "breadcrumbs.enabled": true,
   "editor.minimap.enabled": true,
   "gitlens.settings.mode": "advanced",
@@ -27,5 +23,11 @@
   "gitlens.statusBar.format": "[${id}] ${author}, ${agoOrDate}",
   "gitlens.statusBar.alignment": "left",
   "gitlens.statusBar.reduceFlicker": true,
-  "javascript.updateImportsOnFileMove.enabled": "always"
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "cSpell.userWords": [
+    "gettext",
+    "ngettext",
+    "sprintf"
+  ],
+  "explorer.autoReveal": false
 }
