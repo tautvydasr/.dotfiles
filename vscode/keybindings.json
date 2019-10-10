@@ -16,4 +16,9 @@
     "key": "cmd+f",
     "command": "actions.findWithSelection"
   },
+  {
+    "key": "cmd+b",
+    "command": "editor.action.revealDefinition",
+    "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+  },
 ]
