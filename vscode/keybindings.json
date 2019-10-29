@@ -13,12 +13,16 @@
     "command": "workbench.files.action.showActiveFileInExplorer"
   },
   {
-    "key": "cmd+f",
-    "command": "actions.findWithSelection"
-  },
-  {
     "key": "cmd+b",
     "command": "editor.action.revealDefinition",
     "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+  },
+  {
+    "key": "alt+1",
+    "command": "extension.runJest"
+  },
+  {
+    "key": "alt+2",
+    "command": "extension.debugJest"
   },
 ]
