@@ -8,6 +8,7 @@ alias dotfiles='cd ~/.dotfiles'
 # System
 alias cls='clear'
 alias rmf='/bin/rm -rf'
+alias -g G='| grep -i'
 
 if is_linux; then
     alias open='xdg-open'
