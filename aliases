@@ -9,6 +9,7 @@ alias dotfiles='cd ~/.dotfiles'
 alias cls='clear'
 alias rmf='/bin/rm -rf'
 alias -g G='| grep -i'
+alias lr='ls -ltrFh'
 
 if is_linux; then
     alias open='xdg-open'
@@ -39,4 +40,5 @@ alias he='heroku'
 # Kubernetes
 alias kb='kubectl'
 alias kbo='kubectl options'
+
 
