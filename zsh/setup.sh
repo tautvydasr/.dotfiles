@@ -32,6 +32,10 @@ git clone git://github.com/sigurdga/gnome-terminal-colors-solarized.git ~/.solar
 cd ~/.solarized
 ./install.sh
 
+# Setup spaceship prompt
+git clone https://github.com/spaceship-prompt/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1
+ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+
 # Sym-link .zshrc file
 rm ~/.zshrc &> /dev/null
 rm ~/.zshrc.pre-oh-my-zsh &> /dev/null
