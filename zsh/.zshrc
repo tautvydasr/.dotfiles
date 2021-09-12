@@ -18,6 +18,7 @@ ZSH_THEME="spaceship"
 SPACESHIP_BATTERY_SHOW=false
 SPACESHIP_DIR_TRUNC=0
 SPACESHIP_DIR_TRUNC_REPO=false
+SPACESHIP_PACKAGE_SHOW=false
 SPACESHIP_PROMPT_ORDER=(
   #time          # Time stamps section
   user           # Username section
@@ -25,7 +26,7 @@ SPACESHIP_PROMPT_ORDER=(
   host           # Hostname section
   git            # Git section (git_branch + git_status)
   #hg            # Mercurial section (hg_branch  + hg_status)
-  package        # Package version
+  #package       # Package version
   #gradle        # Gradle section
   #maven         # Maven section
   node           # Node.js section
