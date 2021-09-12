@@ -1,4 +1,5 @@
 "Enable syntax highlighting
+colo default
 syntax enable
 
 "Enable smart indentation and make tab to be 4 spaces
