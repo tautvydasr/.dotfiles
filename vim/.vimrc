@@ -9,7 +9,7 @@ set shiftwidth=4
 set expandtab
 
 "Enable lines numbering
-set number
+set number relativenumber
 
 "Add /bin/bash shebang to *.sh files
 autocmd BufNewFile *.sh 0put = '#!/bin/bash'
