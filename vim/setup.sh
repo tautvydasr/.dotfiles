@@ -1,9 +1,7 @@
 #!/bin/bash
 
-# Install vim package
-sudo apt update > /dev/null
-sudo apt install -y vim
+rm ~/.config/nvim &> /dev/null
+mkdir -p ~/.config/nvim &> /dev/null
 
-# Sym-link .vimrc file
-rm ~/.vimrc &> /dev/null
-ln -s ~/.dotfiles/vim/.vimrc ~/.vimrc
+ln -s ~/.dotfiles/vim/nvim-config ~/.config/nvim
+

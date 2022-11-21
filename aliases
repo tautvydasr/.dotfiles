@@ -1,11 +1,11 @@
 source ~/.dotfiles/scripts/os.sh
 
 # Configs
-alias vimconfig='$EDITOR ~/.vimrc'
 alias zshconfig='$EDITOR ~/.zshrc'
 alias dotfiles='cd ~/.dotfiles'
 
 # System
+alias vim='nvim'
 alias cls='clear'
 alias rmf='/bin/rm -rf'
 alias -g G='| grep -i'
