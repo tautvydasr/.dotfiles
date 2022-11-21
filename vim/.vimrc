@@ -11,6 +11,9 @@ set expandtab
 "Enable lines numbering
 set number relativenumber
 
+"Enable active line highlighting
+set cursorline 
+
 "Add /bin/bash shebang to *.sh files
 autocmd BufNewFile *.sh 0put = '#!/bin/bash'
 
