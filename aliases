@@ -3,7 +3,7 @@ source ~/.dotfiles/scripts/os.sh
 # Configs
 alias zshconfig='$EDITOR ~/.zshrc'
 alias dotfiles='cd ~/.dotfiles'
-alias nvimconfig='cd ~/.dotfiles/vim/nvim-config'
+alias nvimconfig='cd ~/.dotfiles/nvim/config'
 
 # System
 alias vim='nvim'
