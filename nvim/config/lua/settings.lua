@@ -11,4 +11,3 @@ vim.opt.shiftwidth = 4
 vim.opt.hlsearch = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
-
