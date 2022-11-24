@@ -1,9 +1,10 @@
 vim.cmd[[colorscheme dracula]]
 
-vim.opt.number = true 
+vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.cursorline = true
 vim.opt.colorcolumn = "120"
+vim.opt.scrolloff = 10
 
 vim.opt.expandtab = true
 vim.opt.smartindent = true
