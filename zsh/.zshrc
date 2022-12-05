@@ -6,8 +6,9 @@ source ~/.dotfiles/scripts/path.sh
 export ZSH=~/.oh-my-zsh
 export_to_path ~/.local/bin
 export_to_path ~/.dotfiles/scripts
-export_to_path ~/.datadog-dockerfiles/bin 
+export_to_path ~/.datadog-dockerfiles/bin
 export_to_path "$HOME/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+export_to_path ~/.cargo/bin
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -145,7 +146,7 @@ source ~/.dotfiles/aliases
 
 # Source system specific aliases by creating .system_aliases file on home dir
 if [ -f ~/.system_aliases ]; then
-    source ~/.system_aliases    
+    source ~/.system_aliases
 fi
 
 # Completion
