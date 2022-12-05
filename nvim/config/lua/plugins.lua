@@ -3,4 +3,5 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   use 'Mofiqul/dracula.nvim'
   use 'pangloss/vim-javascript'
+  use 'rust-lang/rust.vim'
 end)
