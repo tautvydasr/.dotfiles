@@ -16,4 +16,5 @@ git config --global gpg.program gpg
 git config --global commit.gpgsign true
 git config --global pager.branch false
 git config --global pager.config false
+git config --global init.defaultBranch main
 
