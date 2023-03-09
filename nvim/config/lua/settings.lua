@@ -5,6 +5,7 @@ vim.opt.relativenumber = true
 vim.opt.cursorline = true
 vim.opt.colorcolumn = "120"
 vim.opt.scrolloff = 10
+vim.opt.modifiable = true
 
 vim.opt.expandtab = true
 vim.opt.smartindent = true
