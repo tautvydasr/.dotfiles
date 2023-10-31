@@ -11,12 +11,13 @@ alias cls='clear'
 alias rmf='/bin/rm -rf'
 alias -g G='| grep -i'
 alias lr='ls -ltrFh'
+alias le='ls -ltrFh'
 
 if is_linux; then
     alias open='xdg-open'
     alias o='xdg-open'
     alias trashbin='cd ~/.local/share/Trash'
-    alias cleantrashbin='/bin/rm -rf ~/.local/share/Trash/files/* & /bin/rm -rf ~/.local/share/Trash/info/*' 
+    alias cleantrashbin='/bin/rm -rf ~/.local/share/Trash/files/* & /bin/rm -rf ~/.local/share/Trash/info/*'
     alias cleancrashes='sudo /bin/rm /var/crash/*'
 fi
 
@@ -35,7 +36,7 @@ alias run-behat="docker-compose exec --user www php /var/www/vendor/bin/behat"
 alias run-unit="docker-compose exec --user www php /var/www/vendor/bin/phpunit"
 alias dcproxy="cd ~/.datadog-dockerfiles/proxy && docker-compose up -d && cd -"
 
-# Laravel 
+# Laravel
 alias pa='php artisan'
 alias he='heroku'
 
