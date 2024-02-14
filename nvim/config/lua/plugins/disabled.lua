@@ -5,4 +5,5 @@ return {
   { "ggandor/leap.nvim", enabled = false },
   { "nvimdev/dashboard-nvim", enabled = false },
   { "persistence.nvim", enabled = false },
+  { "mini.indentscope", enabled = false },
 }
