@@ -6,4 +6,5 @@ return {
   { "nvimdev/dashboard-nvim", enabled = false },
   { "persistence.nvim", enabled = false },
   { "mini.indentscope", enabled = false },
+  { "mini.ai", enabled = false },
 }
