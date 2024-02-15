@@ -7,4 +7,5 @@ return {
   { "persistence.nvim", enabled = false },
   { "mini.indentscope", enabled = false },
   { "mini.ai", enabled = false },
+  { "mini.surround", enabled = false },
 }
