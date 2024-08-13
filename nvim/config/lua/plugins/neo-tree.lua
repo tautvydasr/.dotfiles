@@ -10,6 +10,12 @@ return {
     },
   },
   opts = {
+    window = {
+      width = 50,
+      mappings = {
+        ["P"] = { "toggle_preview", config = { use_float = true } },
+      },
+    },
     filesystem = {
       filtered_items = {
         visible = true,
