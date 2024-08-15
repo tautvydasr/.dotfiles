@@ -6,7 +6,6 @@ source ~/.dotfiles/scripts/path.sh
 export ZSH=~/.oh-my-zsh
 export_to_path ~/.local/bin
 export_to_path ~/.dotfiles/scripts
-export_to_path ~/.datadog-dockerfiles/bin
 export_to_path "$HOME/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 export_to_path ~/.cargo/bin
 
