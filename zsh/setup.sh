@@ -13,24 +13,9 @@ OH_MY_ZSH_PATH=~/.oh-my-zsh
 if [[ -d "$OH_MY_ZSH_PATH" ]]; then
     if confirm "Oh My Zsh is already installed. Remove it"; then 
         rm -rf ~/.oh-my-zsh > /dev/null
-        sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+        curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
     fi
 fi
-
-# Setup powerline fonts
-wget https://github.com/powerline/powerline/raw/develop/font/PowerlineSymbols.otf
-wget https://github.com/powerline/powerline/raw/develop/font/10-powerline-symbols.conf
-mkdir -p ~/.fonts
-mv PowerlineSymbols.otf ~/.fonts/
-mkdir -p ~/.config/fontconfig/conf.d
-fc-cache -vf ~/.fonts/
-mv 10-powerline-symbols.conf ~/.config/fontconfig/conf.d/
-
-# Setup solarized theme
-sudo apt-get install -y dconf-cli
-git clone git://github.com/sigurdga/gnome-terminal-colors-solarized.git ~/.solarized
-cd ~/.solarized
-./install.sh
 
 # Setup spaceship prompt
 git clone https://github.com/spaceship-prompt/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1
