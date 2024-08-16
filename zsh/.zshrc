@@ -29,6 +29,7 @@ SPACESHIP_PROMPT_ORDER=(
   #package       # Package version
   #gradle        # Gradle section
   #maven         # Maven section
+  java           # Java section
   node           # Node.js section
   #ruby          # Ruby section
   #elixir        # Elixir section
@@ -40,7 +41,7 @@ SPACESHIP_PROMPT_ORDER=(
   #haskell       # Haskell Stack section
   #julia         # Julia section
   docker         # Docker section
-  aws            # Amazon Web Services section
+  #aws           # Amazon Web Services section
   #gcloud        # Google Cloud Platform section
   #venv          # virtualenv section
   #conda         # conda virtualenv section
