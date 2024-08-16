@@ -6,7 +6,9 @@ alias dotfiles='cd ~/.dotfiles'
 alias nvimconfig='cd ~/.dotfiles/nvim/config'
 
 # System
-alias vim='nvim'
+if [ "$EDITOR" = "nvim" ]; then
+    alias vim='nvim'
+fi
 alias cls='clear'
 alias rmf='/bin/rm -rf'
 alias -g G='| grep -i'

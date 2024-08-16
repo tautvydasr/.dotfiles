@@ -6,8 +6,6 @@ source ~/.dotfiles/scripts/path.sh
 export ZSH=~/.oh-my-zsh
 export_to_path ~/.local/bin
 export_to_path ~/.dotfiles/scripts
-export_to_path ~/.datadog-dockerfiles/bin
-export_to_path "$HOME/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 export_to_path ~/.cargo/bin
 
 # Set name of the theme to load. Optionally, if you set this to "random"
@@ -30,30 +28,31 @@ SPACESHIP_PROMPT_ORDER=(
   #package       # Package version
   #gradle        # Gradle section
   #maven         # Maven section
+  java           # Java section
   node           # Node.js section
   #ruby          # Ruby section
   #elixir        # Elixir section
   #xcode         # Xcode section
   #swift         # Swift section
   #golang        # Go section
-  php            # PHP section
+  #php           # PHP section
   #rust          # Rust section
   #haskell       # Haskell Stack section
   #julia         # Julia section
   docker         # Docker section
-  aws            # Amazon Web Services section
+  #aws           # Amazon Web Services section
   #gcloud        # Google Cloud Platform section
   #venv          # virtualenv section
   #conda         # conda virtualenv section
   #pyenv         # Pyenv section
-  #dotnet        # .NET section
+  dotnet         # .NET section
   #ember         # Ember.js section
   #kubectl       # Kubectl context section
   #terraform     # Terraform workspace section
   exec_time      # Execution time
   line_sep       # Line break
   battery        # Battery level and status
-  vi_mode        # Vi-mode indicator
+  #vi_mode       # Vi-mode indicator
   jobs           # Background jobs indicator
   exit_code      # Exit code section
   char           # Prompt character
@@ -114,6 +113,8 @@ plugins=(
   extract
   common-aliases
   docker-compose
+  mvn
+  dotnet
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -126,7 +127,11 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-export EDITOR="nvim"
+if [ $commands[nvim] ]; then
+    export EDITOR="nvim"
+else
+    export EDITOR="vim"
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
