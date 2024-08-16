@@ -46,7 +46,7 @@ SPACESHIP_PROMPT_ORDER=(
   #venv          # virtualenv section
   #conda         # conda virtualenv section
   #pyenv         # Pyenv section
-  #dotnet        # .NET section
+  dotnet         # .NET section
   #ember         # Ember.js section
   #kubectl       # Kubectl context section
   #terraform     # Terraform workspace section
@@ -115,6 +115,7 @@ plugins=(
   common-aliases
   docker-compose
   mvn
+  dotnet
 )
 
 source $ZSH/oh-my-zsh.sh
