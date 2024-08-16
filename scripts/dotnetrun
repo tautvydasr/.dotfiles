@@ -1,0 +1,88 @@
+#!/bin/bash
+
+# Select existing terminal colors
+bold=$(tput bold)
+red=$(tput setaf 1)
+green=$(tput setaf 2)
+blue=$(tput setaf 4)
+reset=$(tput sgr0)
+
+selected=$1
+arguments=${@:2}
+profiles=()
+
+_error() {
+    echo -e "\n${red}$1${reset}"
+    exit 1
+}
+
+_profiles() {
+    prompt=$1
+    # Find all launch setting JSON files in the current and child directories
+    local files=$(find . -maxdepth 5 -type f -name "launchSettings.json")
+
+    if [ -z "$files" ]; then
+        _error "No launch profiles were exists."
+    fi
+
+    # Set the Internal Field Separator to handle file names with spaces
+    IFS=$'\n'
+
+    local i=1
+    for file in $files; do
+        [ -n "$prompt" ] &&
+            echo -e "\n${bold}On ${blue}$file${reset}${bold} file exists the following profiles:\n${reset}"
+
+        local json=$(sed -E 's#(//[^"]*)##g' "$file") # Removes commented lines from the json file
+        local profiles_in_file=$(echo "$json" | jq '.profiles | keys | .[]' | sed -E 's/"//g')
+
+        for profile in $profiles_in_file; do
+            [ -n "$prompt" ] && echo "${blue}$i${reset}) ${green}$profile${reset}"
+            profiles+=("$profile")
+            ((i++))
+        done
+    done
+}
+
+_run() {
+    local exists=false
+    for profile in "${profiles[@]}"; do
+        if [[ $profile == "$1" ]]; then
+            exists=true
+            break
+        fi
+    done
+
+    if $exists; then
+        # TODO: replace with actual dotnet run command
+        echo "dotnet run --launch-profile $1 $arguments"
+        exit $?
+    else
+        _error "Run profile $1 does not exist."
+    fi
+}
+
+# No arguments provided, let the user to select the profile to run
+if [ $# -eq 0 ]; then
+    _profiles "prompt"
+    echo ""
+    read -p "Select launch profile to run (${blue}index${reset} or ${green}name${reset}): " selected
+fi
+
+# Load the profiles silently if array is still empty
+if [[ ${#profiles[@]} -eq 0 ]]; then
+    _profiles
+fi
+
+# Run the profile by selected name
+if [[ ! $selected =~ ^[1-9]+$ ]]; then
+    _run "$selected"
+fi
+
+# Run the profile by selected index
+index=$(($selected - 1))
+if [[ -z "${profiles[$index]}" ]]; then
+    _error "Selected profile $selected does not exist."
+else
+    _run "${profiles[$index]}"
+fi
