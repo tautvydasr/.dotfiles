@@ -1,7 +1,10 @@
 return {
   "folke/tokyonight.nvim",
   opts = {
-    styles = {},
+    styles = {
+      comments = { italic = false },
+      keywords = { italic = false },
+    },
     on_highlights = function(hl, colors)
       hl.LineNrAbove = {
         fg = colors.blue,
