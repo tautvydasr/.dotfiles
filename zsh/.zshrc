@@ -113,6 +113,7 @@ plugins=(
   extract
   common-aliases
   docker-compose
+  mvn
 )
 
 source $ZSH/oh-my-zsh.sh
