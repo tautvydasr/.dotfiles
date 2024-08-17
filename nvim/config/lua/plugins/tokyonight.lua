@@ -6,6 +6,9 @@ return {
       keywords = { italic = false },
     },
     on_highlights = function(hl, colors)
+      hl.LineNr = {
+        fg = colors.blue,
+      }
       hl.LineNrAbove = {
         fg = colors.blue,
       }
