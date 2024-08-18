@@ -21,3 +21,17 @@ vim.keymap.set({ "n", "v" }, "<leader>y", '"+y', { desc = "[y]ank to the system 
 
 vim.keymap.set({ "n", "v" }, "<leader>P", '"+P', { desc = "[P]aste from the system clipboard" })
 vim.keymap.set({ "n", "v" }, "<leader>p", '"+p', { desc = "[p]aste from the system clipboard" })
+
+-- Marks
+vim.keymap.set(
+  { "n", "v" },
+  "<leader>md",
+  "<cmd>delmarks! | wshada!<cr><esc>",
+  { desc = "NeoVim [m]arks [d]elete for the current buffer" }
+)
+vim.keymap.set(
+  { "n", "v" },
+  "<leader>mD",
+  "<cmd>delmarks a-zA-Z | wshada!<cr><esc>",
+  { desc = "NeoVim all [m]arks [D]elete globally" }
+)
