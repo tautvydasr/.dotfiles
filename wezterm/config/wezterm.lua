@@ -11,6 +11,7 @@ config.font = wezterm.font({
 config.font_size = 11
 config.line_height = 1.1
 config.inactive_pane_hsb = {
+  saturation = 0.7,
   brightness = 0.5,
 }
 
