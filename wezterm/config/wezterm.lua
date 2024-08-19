@@ -9,4 +9,6 @@ config.font = wezterm.font({
 config.font_size = 11
 config.line_height = 1.1
 
+require("events")
+
 return config
