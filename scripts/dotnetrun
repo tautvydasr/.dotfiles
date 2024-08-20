@@ -54,8 +54,9 @@ _run() {
     done
 
     if $exists; then
-        # TODO: replace with actual dotnet run command
-        echo "dotnet run --launch-profile $1 $arguments"
+        echo ""
+        set -x
+        dotnet run --launch-profile $1 $arguments
         exit $?
     else
         _error "Run profile $1 does not exist."
