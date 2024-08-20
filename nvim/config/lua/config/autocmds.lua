@@ -8,3 +8,25 @@ vim.api.nvim_create_autocmd("TermEnter", {
     vim.opt.relativenumber = true
   end,
 })
+
+vim.api.nvim_create_autocmd({ "VimEnter", "VimResume" }, {
+  callback = function()
+    local stdout = vim.loop.new_tty(1, false)
+
+    if stdout ~= nil then
+      stdout:write(("\x1b]1337;SetUserVar=%s=%s\007"):format("NVIM_PADDING", "ZW5hYmxlZA=="))
+      stdout:close()
+    end
+  end,
+})
+
+vim.api.nvim_create_autocmd({ "VimLeave", "VimSuspend" }, {
+  callback = function()
+    local stdout = vim.loop.new_tty(1, false)
+
+    if stdout ~= nil then
+      stdout:write(("\x1b]1337;SetUserVar=%s=%s\007"):format("NVIM_PADDING", "Cg=="))
+      stdout:close()
+    end
+  end,
+})
