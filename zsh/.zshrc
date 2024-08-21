@@ -175,3 +175,8 @@ export NVM_DIR="$HOME/.nvm"
 
 # Load avn (auto change node version if .node-version file exists in the dir)
 [[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh"
+
+# wezterm autocompletion
+if [ $commands[wezterm] ]; then
+    source <(wezterm shell-completion --shell zsh)
+fi
