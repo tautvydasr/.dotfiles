@@ -21,9 +21,10 @@ end)
 
 wezterm.on("window-config-reloaded", function(window)
   if string.find(wezterm.gui.screens().active.name, "Retina Display") then
-    window:set_config_overrides({
-      font_size = 12.8,
-      line_height = 1.2,
-    })
+    local overrides = window:get_config_overrides() or {}
+    overrides.font_size = 12.8
+    overrides.line_height = 1.2
+
+    window:set_config_overrides(overrides)
   end
 end)
