@@ -8,4 +8,5 @@ return {
   { "mini.indentscope", enabled = false },
   { "mini.ai", enabled = false },
   { "mini.surround", enabled = false },
+  { "mini.pairs", enabled = false },
 }
