@@ -22,6 +22,22 @@ vim.keymap.set({ "n", "v" }, "<leader>y", '"+y', { desc = "[y]ank to the system 
 vim.keymap.set({ "n", "v" }, "<leader>P", '"+P', { desc = "[P]aste from the system clipboard" })
 vim.keymap.set({ "n", "v" }, "<leader>p", '"+p', { desc = "[p]aste from the system clipboard" })
 
+-- Git
+if vim.fn.executable("lazygit") == 0 then
+  vim.keymap.del("n", "<leader>gg")
+  vim.keymap.del("n", "<leader>gG")
+  vim.keymap.del("n", "<leader>gf")
+  vim.keymap.del("n", "<leader>gl")
+  vim.keymap.del("n", "<leader>gL")
+end
+
+vim.keymap.set(
+  { "n", "v" },
+  "<leader>gf",
+  "G<cmd>2,s/pick/fixup/g<cr>gg<cmd>noh<cr>",
+  { desc = "Pick first and [g]it [f]ixup all other commits when rebasing", silent = true }
+)
+
 -- Marks
 vim.keymap.set(
   { "n", "v" },
