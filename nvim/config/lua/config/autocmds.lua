@@ -30,3 +30,17 @@ vim.api.nvim_create_autocmd({ "VimLeave", "VimSuspend" }, {
     end
   end,
 })
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "javascript", "typescript" },
+  callback = function()
+    vim.keymap.set({ "v" }, "<leader>cl", "yoconsole.log('pa:', pa);", { desc = "[c]ode [l]og" })
+  end,
+})
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "cs" },
+  callback = function()
+    vim.keymap.set({ "v" }, "<leader>cl", 'yoSystem.Console.WriteLine($"pa: {pa}");', { desc = "[c]ode [l]og" })
+  end,
+})
