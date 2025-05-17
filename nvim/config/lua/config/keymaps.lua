@@ -23,13 +23,13 @@ vim.keymap.set({ "n", "v" }, "<leader>P", '"+P', { desc = "[P]aste from the syst
 vim.keymap.set({ "n", "v" }, "<leader>p", '"+p', { desc = "[p]aste from the system clipboard" })
 
 -- Git
-if vim.fn.executable("lazygit") == 0 then
-  vim.keymap.del("n", "<leader>gg")
-  vim.keymap.del("n", "<leader>gG")
-  vim.keymap.del("n", "<leader>gf")
-  vim.keymap.del("n", "<leader>gl")
-  vim.keymap.del("n", "<leader>gL")
-end
+-- if vim.fn.executable("lazygit") == 0 then
+--   -- vim.keymap.del("n", "<leader>gg")
+--   vim.keymap.del("n", "<leader>gG")
+--   vim.keymap.del("n", "<leader>gf")
+--   vim.keymap.del("n", "<leader>gl")
+--   vim.keymap.del("n", "<leader>gL")
+-- end
 
 vim.keymap.set(
   { "n", "v" },
