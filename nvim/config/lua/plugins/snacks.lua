@@ -6,5 +6,10 @@ return {
     },
     scroll = { enabled = false },
     dashboard = { enabled = false },
+    terminal = {
+      win = {
+        position = "float",
+      },
+    },
   },
 }
