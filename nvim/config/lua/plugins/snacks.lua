@@ -5,5 +5,6 @@ return {
       scope = { enabled = false },
     },
     scroll = { enabled = false },
+    dashboard = { enabled = false },
   },
 }
