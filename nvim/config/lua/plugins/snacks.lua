@@ -4,5 +4,6 @@ return {
     indent = {
       scope = { enabled = false },
     },
+    scroll = { enabled = false },
   },
 }
