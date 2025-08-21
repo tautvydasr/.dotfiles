@@ -4,7 +4,7 @@
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 
-vim.opt.scrolloff = 15 -- Lines of context
+vim.opt.scrolloff = 10 -- Lines of context
 vim.opt.colorcolumn = "120" -- Mark virtual page size
 
 vim.opt.spelllang = "en_us"
