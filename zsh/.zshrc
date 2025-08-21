@@ -180,3 +180,8 @@ export NVM_DIR="$HOME/.nvm"
 if [ $commands[wezterm] ]; then
     source <(wezterm shell-completion --shell zsh)
 fi
+
+# fnm
+if [ $commands[fnm] ]; then
+    eval "$(fnm env --use-on-cd --shell zsh)"
+fi
