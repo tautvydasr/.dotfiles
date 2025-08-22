@@ -1,5 +1,6 @@
 return {
   "nvim-telescope/telescope.nvim",
+  enabled = false,
   opts = function()
     local send_to_qflist = function(...)
       require("telescope.actions").send_to_qflist(...)
